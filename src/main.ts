@@ -1,8 +1,11 @@
 import { app, ipcMain } from "electron";
 const express = require("express");
 import { autoUpdater } from "electron-updater";
+import * as path from "path";
 
 const SERVER_PORT = 3000;
+
+const appVersion = require(path.join(__dirname, "../package.json")).version;
 
 app.on("ready", () => {
   // Check for updates
@@ -12,7 +15,7 @@ app.on("ready", () => {
   const server = express();
 
   server.get("/", (req: any, res: { send: (arg0: string) => void }) => {
-    res.send("Hello from Electron App Web UI!");
+    res.send(`Hello from Electron App Web UI! Current version: ${appVersion}`);
   });
 
   server.listen(SERVER_PORT, () => {
