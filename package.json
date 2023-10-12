@@ -1,6 +1,6 @@
 {
   "name": "updaterdemo",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "POC for electron-updater",
   "main": "./dist/main.js",
   "scripts": {
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dhavalc25/UpdaterDemo.git"
+    "url": "https://github.com/dhavalc25/UpdaterDemo.git"
   },
   "build": {
     "appId": "updaterdemo1",
@@ -27,7 +27,7 @@
     "publish": [
       {
         "provider": "github",
-        "owner": "dchauhan",
+        "owner": "dhavalc25",
         "repo": "UpdaterDemo"
       }
     ],
@@ -52,7 +52,8 @@
   "dependencies": {
     "electron-updater": "^6.1.4",
     "ts-node": "^10.9.1",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "express": "^4.18.2"
   },
   "devDependencies": {
     "@types/express": "^4.17.18",
