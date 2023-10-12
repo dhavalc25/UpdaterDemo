@@ -15,7 +15,7 @@ app.on("ready", () => {
   const server = express();
 
   server.get("/", (req: any, res: { send: (arg0: string) => void }) => {
-    res.send(`Hello from Electron App Web UI! Current version: ${appVersion}`);
+    res.send(`This is the Sync Agent UI: ${appVersion}`);
   });
 
   server.listen(SERVER_PORT, () => {
